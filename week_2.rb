@@ -74,14 +74,9 @@ p reverse_a_string("abcde")
 # p find_longest_word("What is the longest word in this phrase?")  #=> "longest"
 
 def find_longest_word(sentence)
-  words = sentence.split(/\W+/).each { |word| 
-  max = 0
-  if word.length > max
-    max = word.length
-  end
-}
-  max
-  
+  #         removes special characters | sorts by length | reverses to start with the longest
+  longest = sentence.split(/\W+/).sort_by { |word| word.length }.reverse!
+  longest[0]
 end
 
 p find_longest_word("What is the longest word in this phrase?")  

@@ -61,20 +61,18 @@ p mutation?("burly", "python")
 #working on the long hand logic
 
 # def mutation?(s1, s2) 
-# i = 0
-# ii = 0
-# while i < s1.length
-#     if s1[i] == s2[ii]
-#       true
+#   i = 0
+#   ii = 0
+#   while i < s1.length
+#     if s1[0] == s2[0]
 #       ii += 1
 #       i += 1
 #     else
-#       false
 #       ii += 1
 #     end
-#   ii = 0
-#   i += 1
-# end
+#     ii = 0
+#     i += 1
+#   end
 # end
 
 # p mutation?("burly", "ruby")  
@@ -85,3 +83,12 @@ p mutation?("burly", "python")
 # p sum_of_range([1, 4])  #=> 10
 # p sum_of_range([4, 1])  #=> 10
 # ```
+
+def sum_of_range(numbers)
+  range = (numbers.min..numbers.max).to_a
+  sum = range.reduce(0) { |sum,number| sum + number }
+end
+
+p sum_of_range([1,4,10,20].take(2))
+
+# the issue with this solution is that there's a hole.  It can accept more than 2 numbers.  By adding the .take(2) it's a partial solution in that it will only use the first two numbers entered.  I suppose if this was being done, a .times method could be used in conjunction with gets.chomp to limit. 

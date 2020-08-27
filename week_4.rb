@@ -91,4 +91,4 @@ end
 
 p sum_of_range([1,4,10,20].take(2))
 
-# the issue with this solution is that there's a hole.  It can accept more than 2 numbers.  By adding the .take(2) it's a partial solution in that it will only use the first two numbers entered.  I suppose if this was being done, a .times method could be used in conjunction with gets.chomp to limit. 
+# the issue with this solution is that there's a hole.  It can accept more than 2 numbers.  By adding the .take(2) it's a partial solution in that it will only use the first two numbers entered.  I suppose if this was being done, a .times method could be used in conjunction with gets.chomp to limit.  

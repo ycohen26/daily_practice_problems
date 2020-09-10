@@ -7,19 +7,19 @@
   ]
 #   ```
 
-p sorted_people = people.map { |p| p["age"] }.sort #this only sort the ages not the whole has?
+# p people.sort { |a,b| a["age"] <=> b["age"] }
 
   
 #   Use the `sort` method to sort the array of hashes first by age, then by name.
 #   ```
-#   people = [
-#     {name: "bob", age: 15, gender: "male"},
-#     {name: "alice", age: 25, gender: "female"},
-#     {name: "bob", age: 56, gender: "male"},
-#     {name: "dave", age: 45, gender: "male"},
-#     {name: "alice", age: 56, gender: "female"},
-#     {name: "adam", age: 15, gender: "male"}
-#   ]
+  people = [
+    {name: "bob", age: 15, gender: "male"},
+    {name: "alice", age: 25, gender: "female"},
+    {name: "bob", age: 56, gender: "male"},
+    {name: "dave", age: 45, gender: "male"},
+    {name: "alice", age: 56, gender: "female"},
+    {name: "adam", age: 15, gender: "male"}
+  ]
 #   ```
 #   The result should be:
 #   ```
@@ -32,6 +32,8 @@ p sorted_people = people.map { |p| p["age"] }.sort #this only sort the ages not 
 #     {:name=>"bob", :age=>56, :gender=>"male"}
 #   ]
 #   ```
+
+p people.sort { |a,b| [a["age"], a["name"]] <=> [b["age"], b["name"]] }
   
 #   Use the `sort` and `map` methods to convert the array of hashes
 #   ```
